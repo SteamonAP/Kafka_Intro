@@ -1,6 +1,9 @@
 import { kafka } from "./client.js";
+import { Partitioners } from "kafkajs";
 
-const producer =  kafka.producer();
+const producer =  kafka.producer({
+    createPartitioner: Partitioners.LegacyPartitioner
+});
 
 export const connectproducer = async ()=> {
     

@@ -1,6 +1,7 @@
 import { consumer } from "./consumer.js";
 import { producer } from "./producer.js";
 
+
 export const messageProducer = async (topic: string, data: any) => {
 
     const month = new Date(data.dob).getMonth();
